@@ -1,0 +1,48 @@
+{% extends "page_maitre.html" %} {% block titre %} Accueil {% endblock %} {% block contenu %}
+
+<header>
+    <div id="header-img"></div>
+    <div id="menu">
+        <div class="interaction">
+            <a href="">Partager</a>
+            <a href="">Connexion</a>
+            <i class="fa-solid fa-magnifying-glass icon"></i>
+            <input type="search" placeholder="recherche">
+        </div>
+    </div>
+</header>
+<main>
+    <nav>
+        <ul>
+            <li>
+                <a href={{url_for( "index")}}>Accueil</a>
+                <a href={{url_for( "form")}}>Formulaire</a>
+                <a href={{url_for( "tableau")}}>Tableau</a>
+            </li>
+        </ul>
+    </nav>
+    <div id="container">
+        <div class="carousel">
+            <span id="item-1"></span>
+            <span id="item-2"></span>
+            <span id="item-3"></span>
+            <div class="carousel-item item-1">
+                <a href="#item-2" class="arrow-prev arrow"></a>
+                <a href="#item-2" class="arrow-next arrow"></a>
+            </div>
+            <div class="carousel-item item-2">
+                <a href="#item-1" class="arrow-prev arrow"></a>
+                <a href="#item-1" class="arrow-next arrow"></a>
+            </div>
+        </div>
+        <div id="text">
+            <h1>Inspirez-vous<br>du futur.</h1>
+            <p>Ces voitures permettent de démontrer une nouvelle technologie, des éléments de style ou encore un nouveau mode d’utilisation. On se projette dans le futur en imaginant la voiture de demain. Petit tour d’horizon des concept-cars attendus de
+                2022.
+            </p>
+        </div>
+    </div>
+</main>
+
+
+{% endblock %}

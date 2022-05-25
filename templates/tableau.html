@@ -1,0 +1,80 @@
+{% extends "page_maitre.html" %} {% block titre %} Tableau {% endblock %} {% block contenu %}
+
+<header>
+    <div id="header-img"></div>
+    <div id="menu">
+        <div class="interaction">
+            <a href="">Partager</a>
+            <a href="">Connexion</a>
+            <i class="fa-solid fa-magnifying-glass icon"></i>
+            <input type="search" placeholder="recherche">
+        </div>
+    </div>
+</header>
+<main>
+    <nav id="toRemove-nav">
+        <ul>
+            <li>
+                <a href={{url_for( "tableau")}}>Tableau</a>
+                <a href={{url_for( "index")}}>Accueil</a>
+                <a href={{url_for( "form")}}>Formulaire</a>
+            </li>
+        </ul>
+    </nav>
+    <div id="container">
+        <table>
+            <tr>
+                <th>Marques</th>
+                <th>Types de voitures </th>
+                <th>Types de carburant </th>
+                <th>Année</th>
+                <th>Couleur</th>
+            </tr>
+            <tr>
+                <td>Ferrari</td>
+                <td>Berline</td>
+                <td>Essences</td>
+                <td>2020</td>
+                <td>Rouge</td>
+            </tr>
+            <tr>
+                <td>Tesla</td>
+                <td>coupé</td>
+                <td>Hybride</td>
+                <td>2021</td>
+                <td>Blanc</td>
+            </tr>
+            <tr>
+                <td>Lamborghini</td>
+                <td>Berline</td>
+                <td>Diesel</td>
+                <td>2019</td>
+                <td>Gris</td>
+            </tr>
+            <tr>
+                <td>Toyota</td>
+                <td>Pick-up</td>
+                <td>Diesel</td>
+                <td>2019</td>
+                <td>Brun</td>
+            </tr>
+            <tr>
+                <td>Hyundai</td>
+                <td>Crossovers</td>
+                <td>Diesel</td>
+                <td>2017</td>
+                <td>Blanc</td>
+            </tr>
+            <tr>
+                <td>Honda</td>
+                <td>Berline</td>
+                <td>Essences</td>
+                <td>2019</td>
+                <td>Noir</td>
+            </tr>
+        </table>
+    </div>
+</main>
+
+
+{% endblock %}

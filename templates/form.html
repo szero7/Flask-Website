@@ -1,0 +1,55 @@
+{% extends "page_maitre.html" %} {% block titre %} Formulaire {% endblock %} {% block contenu %}
+
+<header>
+    <div id="header-img"></div>
+    <div id="menu">
+        <div class="interaction">
+            <a href="">Partager</a>
+            <a href="">Connexion</a>
+            <i class="fa-solid fa-magnifying-glass icon"></i>
+            <input type="search" placeholder="recherche">
+        </div>
+    </div>
+</header>
+<main>
+    <nav>
+        <ul>
+            <li>
+                <a href={{url_for( "form")}}>Formulaire</a>
+                <a href={{url_for( "index")}}>Accueil</a>
+                <a href={{url_for( "tableau")}}>Tableau</a>
+            </li>
+        </ul>
+    </nav>
+    <div id="container">
+        <form method="POST" action="https://philippefleury.com/backend.php">
+            <h2>Merci de remplir<br> ce formulaire</h2>
+            <label for="email">Votre courriel </label>
+            <input name="email" class="email" type="email" required>
+            <br>
+            <label for="cars">Selectionner </label>
+            <select name="cars" required>
+                        <option></option>
+                        <optgroup label ="Nouveautés">
+                            <option value="ferrari">Ferrari</option>
+                            <option value="tesla">Tesla</option>
+                            <option value="lamborghini">Lamborghini</option>
+                        </optgroup>
+                        <optgroup label ="Occasions">
+                            <option value="toyota">Toyota</option>
+                            <option value="hyundai">Hyundai</option>
+                            <option value="honda">Honda</option>
+                        </optgroup>
+                    </select>
+            <br>
+            <label for="comments">Laissez-nous un commentaire </label>
+            <br>
+            <textarea name="comments" required></textarea>
+            <br>
+            <input type="submit" value="Envoyer">
+        </form>
+    </div>
+</main>
+
+
+{% endblock %}
